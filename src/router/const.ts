@@ -18,6 +18,12 @@ const routes: RouteRecordRaw[] = [
         meta: { title: '用户', requiresAuth: true }
     },
     {
+        path: '/test',
+        name: 'Test',
+        component: () => import('@/pages/test/index.vue'),
+        meta: { title: '测试' }
+    },
+    {
         path: '/login',
         name: 'Login',
         component: () => import('@/pages/login/index.vue'),
