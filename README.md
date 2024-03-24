@@ -1,6 +1,6 @@
 ### 功能
 
-- [ ] 夜间模式
+- [x] 夜间模式
 - [ ] 国际化
 - [ ] 布局切换
 - [ ] 主题切换
@@ -13,6 +13,7 @@
 - [x] Pinia
 - [x] VueRouter
 - [x] UnoCSS
+- [x] VueUse
 - [x] UnpluginAutoImport/UnpluginVueComponents
 
 ### ToDo
@@ -23,3 +24,5 @@
 - [x] Iconify
 - [x] 字体
 - [x] VueUse
+- [ ] 进度条
+- [ ] highlight
