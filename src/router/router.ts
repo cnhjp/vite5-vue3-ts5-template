@@ -15,12 +15,10 @@ for (const key in modules) {
 }
 
 
-const router = createRouter({
+export const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         ...moduleRoutes,
         ...constRoutes,
     ],
 });
-
-export default router;

@@ -1,7 +1,7 @@
 import type { RouteLocationNormalized, NavigationGuardNext } from 'vue-router';
 import type { UserStore } from '@/store/modules/user'
 import { changeDocumentTitle } from '../utils'
-import router from './router'
+import { router } from './router'
 
 /**
  * 检查登录状态，未登录则跳转到登录页
