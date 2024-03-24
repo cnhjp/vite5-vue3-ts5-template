@@ -1,0 +1,9 @@
+{
+  "message": {
+    "hello": "hello world"
+  },
+  "lang": {
+    "lang": "English",
+    "changeLang": "Change Language"
+  }
+}

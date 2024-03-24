@@ -1,16 +1,19 @@
 import App from './App.vue'
-import router from './router'
-import store from './store'
 import "virtual:uno.css"
 import "./styles/index.css"
 
 const app = createApp(App)
 
 // 安装模块
-const modules = import.meta.glob('./modules/*.ts', { eager: true })
-console.log(modules)
+const modules = {
+    ...import.meta.glob('./modules/*.ts', { eager: true }),
+    ...import.meta.glob('./store/index.ts', { eager: true }),
+    ...import.meta.glob('./router/index.ts', { eager: true }),
+}
+Object.keys(modules).forEach((key) => {
+    const module = modules[key] as any
+    const install = module.install || module
+    install?.(app)
+})
 
-// 安装custom module
-
-app.use(router)
 app.mount('#app')

@@ -5,9 +5,20 @@
   <h1>icon</h1>
   <div class="i-mdi-alarm text-orange-400 dark:bg-blue-500" />
   <div class="i-mdi:car-multiple w-1em h-1em"></div>
+
+  <h1>i18n</h1>
+  <div>{{ $t("message.hello") }}</div>
+  <button class="btn btn-primary" @click="changeLang">
+    {{ $t("lang.changeLang") }}
+  </button>
 </template>
 
 <script setup lang="ts">
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+
+const changeLang = () => {
+  const lang = useI18n().locale;
+  changeLocale(lang === "en" ? "zh-CN" : "en");
+};
 </script>

@@ -15,6 +15,7 @@
 - [x] UnoCSS
 - [x] VueUse
 - [x] UnpluginAutoImport/UnpluginVueComponents
+- [x] VueI18n
 
 ### ToDo
 
