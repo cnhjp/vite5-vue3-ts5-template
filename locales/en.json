@@ -1,6 +1,7 @@
 {
   "message": {
-    "hello": "hello world"
+    "hello": "hello world",
+    "dark": "dark mode"
   },
   "lang": {
     "lang": "English",

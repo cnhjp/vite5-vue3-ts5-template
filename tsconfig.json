@@ -32,6 +32,6 @@
     "src/**/*.vue",
     "src/**/*.d.ts",
     "./auto-imports.d.ts"
-  ],
+, "src/layouts/components/user-avatar"  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

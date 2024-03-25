@@ -17,6 +17,7 @@ export default defineConfig({
         presetIcons({
             collections: {
                 mdi: () => import('@iconify-json/mdi/icons.json').then(i => i.default),
+                heroicons: () => import('@iconify-json/heroicons/icons.json').then(i => i.default),
             }
         })
     ],

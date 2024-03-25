@@ -1,6 +1,7 @@
 {
   "message": {
-    "hello": "你好，世界"
+    "hello": "你好，世界",
+    "dark": "暗黑模式"
   },
   "lang": {
     "lang": "简体中文",

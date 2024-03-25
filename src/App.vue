@@ -1,11 +1,12 @@
 <template>
-  <router-view></router-view>
+  <n-config-provider :theme="theme">
+    <RouterView />
+  </n-config-provider>
 </template>
 
 <script setup lang="ts">
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
+import { darkTheme } from "naive-ui";
+
 useHead({
   meta: [
     {
@@ -20,5 +21,9 @@ useHead({
       href: () => (preferredDark.value ? "/favicon-dark.svg" : "/favicon.svg"),
     },
   ],
+});
+
+const theme = computed(() => {
+  return isDark.value ? darkTheme : undefined;
 });
 </script>
