@@ -31,4 +31,4 @@
 - [ ] husky/lint
 - [ ] 动画
 - [ ] loading
-- [ ] fullscreen
+- [x] fullscreen
