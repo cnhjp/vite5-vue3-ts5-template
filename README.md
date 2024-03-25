@@ -16,6 +16,7 @@
 - [x] VueUse
 - [x] UnpluginAutoImport/UnpluginVueComponents
 - [x] VueI18n
+- [x] NProgress
 
 ### ToDo
 
@@ -25,5 +26,5 @@
 - [x] Iconify
 - [x] 字体
 - [x] VueUse
-- [ ] 进度条
+- [x] 进度条
 - [ ] highlight

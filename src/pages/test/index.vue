@@ -5,6 +5,11 @@
   </button>
   {{ isDark }}
 
+  <h1>font</h1>
+  <p class="font-mono">1 + 1 === 2</p>
+  <p class="font-aguafina">hello everyone</p>
+  <p class="font-architects">are you ok?</p>
+
   <h1>icon</h1>
   <div class="i-mdi-alarm text-orange-400 dark:bg-blue-500" />
   <div class="i-mdi:car-multiple w-1em h-1em"></div>

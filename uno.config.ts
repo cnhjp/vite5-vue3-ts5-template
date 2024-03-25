@@ -6,10 +6,12 @@ export default defineConfig({
     presets: [
         presetUno(),
         presetWebFonts({
-            provider: 'google',
+            provider: 'bunny',
             fonts: {
                 sans: 'Roboto',
                 mono: ['Fira Code', 'Fira Mono:400,700'],
+                aguafina: ['Aguafina Script'],
+                architects: ['Architects Daughter']
             },
         }),
         presetIcons({
