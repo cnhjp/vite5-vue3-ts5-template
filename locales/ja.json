@@ -1,7 +1,9 @@
 {
   "message": {
     "hello": "こんにちは、世界",
-    "dark": "ダークモード"
+    "dark": "ダークモード",
+    "themeSetting": "テーマ設定",
+    "switchLayout": "レイアウト切り替え"
   },
   "lang": {
     "lang": "日本語",

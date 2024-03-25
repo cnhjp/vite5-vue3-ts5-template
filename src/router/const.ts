@@ -19,6 +19,7 @@ const routes: RouteRecordRaw[] = [
     },
     {
         path: '/test',
+        redirect: '/test/index',
         component: () => import('@/layouts'),
         children: [
             {

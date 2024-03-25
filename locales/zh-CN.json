@@ -1,7 +1,9 @@
 {
   "message": {
     "hello": "你好，世界",
-    "dark": "暗黑模式"
+    "dark": "暗黑模式",
+    "themeSetting": "主题设置",
+    "switchLayout": "切换布局"
   },
   "lang": {
     "lang": "简体中文",
