@@ -5,7 +5,7 @@ const routes: RouteRecordRaw[] = [
         path: "/",
         name: "Home",
         component: () => import("@/pages/home/index.vue"),
-        meta: { title: '首页' }
+        meta: { i18nTitlte: 'route.home' }
     },
     {
         path: '/home',
@@ -15,7 +15,7 @@ const routes: RouteRecordRaw[] = [
         path: "/user/:userId?",
         name: "User",
         component: () => import("@/pages/user/index.vue"),
-        meta: { title: '用户', requiresAuth: true }
+        meta: { i18nTitlte: 'route.user', requiresAuth: true }
     },
     {
         path: '/test',
@@ -26,7 +26,7 @@ const routes: RouteRecordRaw[] = [
                 path: 'index',
                 name: 'Test',
                 component: () => import('@/pages/test/index.vue'),
-                meta: { title: '测试' }
+                meta: { i18nTitle: 'route.test' }
             }
         ]
     },
@@ -34,7 +34,7 @@ const routes: RouteRecordRaw[] = [
         path: '/login',
         name: 'Login',
         component: () => import('@/pages/login/index.vue'),
-        meta: { title: '登录' }
+        meta: { i18nTitle: 'route.login' }
     }
 ];
 

@@ -8,5 +8,12 @@
   "lang": {
     "lang": "日本語",
     "changeLang": "言語を切り替える"
+  },
+  "route": {
+    "home": "ホーム",
+    "user": "ユーザー",
+    "statistics": "統計",
+    "login": "ログイン",
+    "test": "テスト"
   }
 }

@@ -8,5 +8,12 @@
   "lang": {
     "lang": "English",
     "changeLang": "Change Language"
+  },
+  "route": {
+    "home": "Home",
+    "user": "User",
+    "statistics": "Statistics",
+    "login": "Login",
+    "test": "Test"
   }
 }

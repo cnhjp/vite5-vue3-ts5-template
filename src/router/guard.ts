@@ -1,6 +1,5 @@
 import type { RouteLocationNormalized, NavigationGuardNext } from 'vue-router';
 import type { UserStore } from '@/store/modules/user'
-import { changeDocumentTitle } from '../utils'
 import { router } from './router'
 
 /**
@@ -8,9 +7,9 @@ import { router } from './router'
  * @param to 
  * @param userStore 
  * @param next 
- * @returns 
+ * @returns
  */
-const checkLogin = (to: RouteLocationNormalized, userStore: UserStore, next: NavigationGuardNext) => {
+export const checkLogin = (to: RouteLocationNormalized, userStore: UserStore, next: NavigationGuardNext) => {
     if (to.meta?.requiresAuth && !userStore.logged) {
         next({ name: 'Login' });
         return false
@@ -22,9 +21,13 @@ const checkLogin = (to: RouteLocationNormalized, userStore: UserStore, next: Nav
  * 修改页面标题
  * @param to 
  */
-const changeTitle = (to: RouteLocationNormalized) => {
+export const changeTitle = (to: RouteLocationNormalized) => {
+    const title = useTitle()
     if (to.meta?.title) {
-        changeDocumentTitle(to.meta.title);
+        title.value = to.meta.title;
+    } else if (to.meta?.i18nTitle) {
+        const { t } = useI18n();
+        title.value = t(to.meta.i18nTitle);
     }
     return true;
 }

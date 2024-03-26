@@ -6,7 +6,7 @@ const routes: RouteRecordRaw[] = [
         name: "Statistics",
         component: () => import("@/pages/statistics/index.vue"),
         meta: {
-            title: '统计'
+            i18nTitlte: 'route.statistics',
         }
     }
 ]

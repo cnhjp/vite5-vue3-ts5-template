@@ -7,12 +7,10 @@ export const install: CustomModule = (app) => {
 
     router.beforeEach((to, from) => {
         if (to.path === from.path) return;
-        console.log(8888888)
         NProgress.start();
     })
 
     router.afterEach(() => {
-        console.log(9999999)
         NProgress.done();
     })
 

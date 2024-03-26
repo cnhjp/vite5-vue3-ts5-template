@@ -10,6 +10,8 @@ declare module 'vue-router' {
     interface RouteMeta {
         // 标题
         title?: string
+        // i18n标题
+        i18nTitle?: string
         // 是否需要登录
         requiresAuth?: boolean
     }

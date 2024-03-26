@@ -13,8 +13,6 @@
 </template>
 
 <script setup lang="ts">
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
 const { layout, layouts, setLayout } = useLayout();
 
 const handleSwitchLayout = (e: string) => {

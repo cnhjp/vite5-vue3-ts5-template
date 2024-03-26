@@ -42,7 +42,6 @@ const onRenderLabel = (option: DropdownOption) => {
 };
 
 const handleSelect = (e: string) => {
-  const i18n = useI18n();
-  i18n.locale = e;
+  changeLocale(e);
 };
 </script>
