@@ -1,5 +1,5 @@
 <template>
-  <n-config-provider :theme="theme">
+  <n-config-provider :theme="theme" class="w-full h-full">
     <RouterView />
   </n-config-provider>
 </template>

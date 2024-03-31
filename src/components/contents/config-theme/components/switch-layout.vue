@@ -1,21 +1,24 @@
 <template>
   <n-divider dashed>{{ $t("message.switchLayout") }}</n-divider>
   <n-flex justify="center">
-    <n-radio-group :value="layout" @update:value="handleSwitchLayout">
+    <n-radio-group
+      :value="layoutState.currentLayout"
+      @update:value="handleSwitchLayout"
+    >
       <n-radio
-        v-for="l in layouts"
-        :key="l.value"
-        :value="l.value"
-        :label="l.label"
+        v-for="l in layoutState.layoutsCount"
+        :key="l"
+        :value="l"
+        :label="`布局${l}`"
       ></n-radio>
     </n-radio-group>
   </n-flex>
 </template>
 
 <script setup lang="ts">
-const { layout, layouts, setLayout } = useLayout();
+const { layoutState } = useThemeStore();
 
-const handleSwitchLayout = (e: string) => {
-  setLayout(e);
+const handleSwitchLayout = (e: number) => {
+  layoutState.currentLayout = e;
 };
 </script>

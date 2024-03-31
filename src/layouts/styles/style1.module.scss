@@ -1,0 +1,42 @@
+.layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--layout-header__height, 60px);
+  }
+
+  &-sider {
+    position: absolute;
+    left: 0;
+    top: var(--layout-header__height, 60px);
+    width: var(--layout-sider__width, 200px);
+    height: calc(
+      100% - var(--layout-header__height, 60px) -
+        var(--layout-footer__height, 60px)
+    );
+  }
+
+  &-content {
+    position: absolute;
+    left: var(--layout-sider__width, 200px);
+    top: var(--layout-header__height, 60px);
+    width: calc(100% - var(--layout-sider__width, 200px));
+    height: calc(
+      100% - var(--layout-header__height, 60px) -
+        var(--layout-footer__height, 60px)
+    );
+  }
+
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: var(--layout-footer__height, 60px);
+    width: 100%;
+  }
+}
