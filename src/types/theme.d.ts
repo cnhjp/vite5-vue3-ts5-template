@@ -7,6 +7,8 @@ interface LayoutCssVarProps {
     collapsedSiderWidth: number
     // footer高度
     footerHeight: number
+    // content内边距
+    contentPadding: number
 }
 
 interface LayoutState {

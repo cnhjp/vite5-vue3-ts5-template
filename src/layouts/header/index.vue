@@ -1,6 +1,6 @@
 <template>
   <n-layout-header bordered>
-    <n-flex justify="right" align="center">
+    <n-flex justify="right" align="center" class="h-full">
       <config-buttons></config-buttons>
       <user-avatar></user-avatar>
     </n-flex>

@@ -30,6 +30,7 @@
       100% - var(--layout-header__height, 60px) -
         var(--layout-footer__height, 60px)
     );
+    padding: var(--layout-content__padding, 10px);
   }
 
   &-footer {

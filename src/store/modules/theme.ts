@@ -14,6 +14,7 @@ export const useThemeStore = defineStore({
             footerHeight: 60,
             siderWidth: 200,
             collapsedSiderWidth: 80,
+            contentPadding: 10
         },
         layoutState: {
             collapsed: false,
@@ -25,11 +26,12 @@ export const useThemeStore = defineStore({
     actions: {
         createLayoutCssVar(layoutConfig?: LayoutCssVarProps) {
             if (!layoutConfig) layoutConfig = this.layoutConfig
-            const { headerHeight, siderWidth, footerHeight, collapsedSiderWidth } = layoutConfig;
+            const { headerHeight, siderWidth, footerHeight, collapsedSiderWidth, contentPadding } = layoutConfig;
             const vars = {
                 '--layout-header__height': `${headerHeight}px`,
                 '--layout-sider__width': `${this.layoutState.collapsed ? collapsedSiderWidth : siderWidth}px`,
                 '--layout-footer__height': `${footerHeight}px`,
+                '--layout-content__padding': `${contentPadding}px`
             }
             let cssText = ''
             for (const key in vars) {
@@ -51,6 +53,10 @@ export const useThemeStore = defineStore({
         },
         setCollapse(collapsed: boolean) {
             this.layoutState.collapsed = collapsed
+            this.createLayoutCssVar()
+        },
+        changeLayoutConfig(key: keyof LayoutCssVarProps, value: number) {
+            this.layoutConfig[key] = value
             this.createLayoutCssVar()
         }
     }

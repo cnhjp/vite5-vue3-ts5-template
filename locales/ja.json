@@ -3,7 +3,12 @@
     "hello": "こんにちは、世界",
     "dark": "ダークモード",
     "themeSetting": "テーマ設定",
-    "switchLayout": "レイアウト切り替え"
+    "switchLayout": "レイアウト切り替え",
+    "layout": "レイアウト",
+    "headerHeight": "ヘッダーの高さ",
+    "siderWidth": "サイダーの幅",
+    "footerHeight": "フッターの高さ",
+    "contentPadding": "コンテンツの余白"
   },
   "lang": {
     "lang": "日本語",

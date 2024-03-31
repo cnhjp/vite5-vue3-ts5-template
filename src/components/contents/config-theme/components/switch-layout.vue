@@ -9,7 +9,7 @@
         v-for="l in layoutState.layoutsCount"
         :key="l"
         :value="l"
-        :label="`布局${l}`"
+        :label="`${$t('message.layout')}${l}`"
       ></n-radio>
     </n-radio-group>
   </n-flex>

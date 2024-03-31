@@ -3,7 +3,12 @@
     "hello": "你好，世界",
     "dark": "暗黑模式",
     "themeSetting": "主题设置",
-    "switchLayout": "切换布局"
+    "switchLayout": "切换布局",
+    "layout": "布局",
+    "headerHeight": "头部高度",
+    "siderWidth": "侧边栏宽度",
+    "footerHeight": "底部高度",
+    "contentPadding": "内容内边距"
   },
   "lang": {
     "lang": "简体中文",

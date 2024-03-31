@@ -24,7 +24,6 @@
 - [ ] 登录
 - [x] Iconify
 - [x] 字体
-- [x] VueUse
 - [x] 进度条
 - [ ] highlight
 - [ ] 网络封装、

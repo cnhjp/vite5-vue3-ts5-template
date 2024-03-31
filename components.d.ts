@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ChangeSize: typeof import('./src/components/contents/config-theme/components/change-size.vue')['default']
     ConfigTheme: typeof import('./src/components/contents/config-theme/index.vue')['default']
     IconButton: typeof import('./src/components/components/icon-button/index.vue')['default']
     NAvatar: typeof import('naive-ui')['NAvatar']
@@ -16,18 +17,23 @@ declare module 'vue' {
     NDrawerContent: typeof import('naive-ui')['NDrawerContent']
     NDropdown: typeof import('naive-ui')['NDropdown']
     NFlex: typeof import('naive-ui')['NFlex']
+    NInputNumber: typeof import('naive-ui')['NInputNumber']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutContent: typeof import('naive-ui')['NLayoutContent']
     NLayoutFooter: typeof import('naive-ui')['NLayoutFooter']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
     NRadio: typeof import('naive-ui')['NRadio']
+    NRadioGr: typeof import('naive-ui')['NRadioGr']
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
+    NSpa: typeof import('naive-ui')['NSpa']
+    NSpace: typeof import('naive-ui')['NSpace']
     NTab: typeof import('naive-ui')['NTab']
     NTabs: typeof import('naive-ui')['NTabs']
     NTooltip: typeof import('naive-ui')['NTooltip']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SwitchLang: typeof import('./src/components/contents/config-theme/components/switch-lang.vue')['default']
     SwitchLayout: typeof import('./src/components/contents/config-theme/components/switch-layout.vue')['default']
     ToggleDark: typeof import('./src/components/contents/config-theme/components/toggle-dark.vue')['default']
   }

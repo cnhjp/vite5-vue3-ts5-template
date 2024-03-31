@@ -3,7 +3,12 @@
     "hello": "hello world",
     "dark": "dark mode",
     "themeSetting": "Theme Setting",
-    "layout": "Switch Layout"
+    "switchLayout": "Switch Layout",
+    "layout": "Layout",
+    "headerHeight": "Header Height",
+    "siderWidth": "Sider Width",
+    "footerHeight": "Footer Height",
+    "contentPadding": "Content Padding"
   },
   "lang": {
     "lang": "English",

@@ -9,7 +9,7 @@ const routes: RouteRecordRaw[] = [
     },
     {
         path: '/home',
-        redirect: '/'
+        redirect: '/',
     },
     {
         path: "/user/:userId?",
