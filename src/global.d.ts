@@ -5,11 +5,4 @@ declare global {
 
     type CustomModule = (ctx: ReturnType<typeof createApp>) => void
 
-    interface LayoutItem {
-        label: string
-        value: string
-        component: ReturnType<typeof defineComponent>
-    }
-
-
 }

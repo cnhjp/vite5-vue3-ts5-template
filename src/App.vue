@@ -1,5 +1,9 @@
 <template>
-  <n-config-provider :theme="theme" class="w-full h-full">
+  <n-config-provider
+    :theme="theme"
+    :theme-overrides="themeOverrides"
+    class="w-full h-full"
+  >
     <RouterView />
   </n-config-provider>
 </template>
@@ -25,5 +29,13 @@ useHead({
 
 const theme = computed(() => {
   return isDark.value ? darkTheme : undefined;
+});
+
+const { themeVars } = useThemeStore();
+
+const themeOverrides = computed(() => {
+  console.log(themeVars, 888);
+  console.log(isRef(themeVars), 999);
+  return themeVars;
 });
 </script>

@@ -7,6 +7,9 @@ import 'vue-router'
 export { }
 
 declare module 'vue-router' {
+    /**
+     * 路由元信息
+     */
     interface RouteMeta {
         // 标题
         title?: string

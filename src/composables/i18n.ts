@@ -5,6 +5,7 @@ import { router, changeTitle } from "@/router";
 
 interface I18nGlobal {
     t: (...args: any[]) => string;
+    locale: any
 }
 
 type I18nReturnType = ReturnType<typeof createI18n>;

@@ -1,3 +1,6 @@
+/**
+ * 布局相关定义
+ */
 interface LayoutCssVarProps {
     // header高度
     headerHeight: number
@@ -11,6 +14,9 @@ interface LayoutCssVarProps {
     contentPadding: number
 }
 
+/**
+ * 布局状态
+ */
 interface LayoutState {
     // 是否折叠
     collapsed: boolean,

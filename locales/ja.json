@@ -14,6 +14,13 @@
     "lang": "日本語",
     "changeLang": "言語を切り替える"
   },
+  "themeColor": {
+    "primaryColor": "プライマリカラー",
+    "infoColor": "情報カラー",
+    "successColor": "成功カラー",
+    "warningColor": "警告カラー",
+    "errorColor": "エラーカラー"
+  },
   "route": {
     "home": "ホーム",
     "user": "ユーザー",

@@ -14,6 +14,13 @@
     "lang": "简体中文",
     "changeLang": "切换语言"
   },
+  "themeColor": {
+    "primaryColor": "主色",
+    "infoColor": "信息色",
+    "successColor": "成功色",
+    "warningColor": "警告色",
+    "errorColor": "错误色"
+  },
   "route": {
     "home": "首页",
     "user": "用户",

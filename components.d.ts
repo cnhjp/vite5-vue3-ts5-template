@@ -8,9 +8,12 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ChangeSize: typeof import('./src/components/contents/config-theme/components/change-size.vue')['default']
+    ChangeTheme: typeof import('./src/components/contents/config-theme/components/change-theme.vue')['default']
     ConfigTheme: typeof import('./src/components/contents/config-theme/index.vue')['default']
     IconButton: typeof import('./src/components/components/icon-button/index.vue')['default']
     NAvatar: typeof import('naive-ui')['NAvatar']
+    NButton: typeof import('naive-ui')['NButton']
+    NColorPicker: typeof import('naive-ui')['NColorPicker']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NDivider: typeof import('naive-ui')['NDivider']
     NDrawer: typeof import('naive-ui')['NDrawer']
@@ -24,7 +27,6 @@ declare module 'vue' {
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
     NRadio: typeof import('naive-ui')['NRadio']
-    NRadioGr: typeof import('naive-ui')['NRadioGr']
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
     NSpa: typeof import('naive-ui')['NSpa']
     NSpace: typeof import('naive-ui')['NSpace']

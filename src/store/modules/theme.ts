@@ -1,8 +1,10 @@
 import { defineStore } from 'pinia';
+import { useThemeVars } from 'naive-ui';
 
 interface ThemeState {
     layoutConfig: LayoutCssVarProps
     layoutState: LayoutState,
+    themeVars: ReturnType<typeof useThemeVars>
 }
 
 export const useThemeStore = defineStore({
@@ -20,7 +22,8 @@ export const useThemeStore = defineStore({
             collapsed: false,
             layoutsCount: 3,
             currentLayout: 1
-        }
+        },
+        themeVars: useThemeVars()
     }),
 
     actions: {
