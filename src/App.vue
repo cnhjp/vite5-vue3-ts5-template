@@ -30,12 +30,12 @@ useHead({
 const theme = computed(() => {
   return isDark.value ? darkTheme : undefined;
 });
-
-const { themeVars } = useThemeStore();
-
+const { themeVars, key } = storeToRefs(useThemeStore());
 const themeOverrides = computed(() => {
-  console.log(themeVars, 888);
-  console.log(isRef(themeVars), 999);
-  return themeVars;
+  return {
+    // TODO: 这里必须加一个key，否则在切换主题时不生效
+    ...themeVars.value,
+    otherKey: key.value,
+  };
 });
 </script>

@@ -5,7 +5,7 @@
       <n-flex justify="space-between" align="center">
         <span>{{ $t(`themeColor.${color}`) }}</span>
         <n-color-picker
-          v-model:value="themeVars[color]"
+          :value="themeVars[color]"
           :on-update:value="(e) => changeThemeColor(color, e)"
           class="w-24"
         />
@@ -15,7 +15,8 @@
 </template>
 
 <script setup lang="ts">
-const { themeVars } = useThemeStore();
+const { changeThemeVars } = useThemeStore();
+const { themeVars } = storeToRefs(useThemeStore());
 
 type ColorKey =
   | "primaryColor"
@@ -33,6 +34,6 @@ const colorList = ref<ColorKey[]>([
 ]);
 
 function changeThemeColor(key: ColorKey, val: string) {
-  themeVars[key] = val;
+  changeThemeVars(key, val);
 }
 </script>

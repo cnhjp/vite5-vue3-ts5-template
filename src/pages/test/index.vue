@@ -31,7 +31,6 @@
   <n-button type="success">成功</n-button>
   <n-button type="warning">警告</n-button>
   <n-button type="error">错误</n-button>
-  {{ typeof foo }}
   <pre>
     {{ foo }}
   </pre>

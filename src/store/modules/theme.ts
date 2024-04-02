@@ -5,6 +5,7 @@ interface ThemeState {
     layoutConfig: LayoutCssVarProps
     layoutState: LayoutState,
     themeVars: ReturnType<typeof useThemeVars>
+    key: number
 }
 
 export const useThemeStore = defineStore({
@@ -23,7 +24,8 @@ export const useThemeStore = defineStore({
             layoutsCount: 3,
             currentLayout: 1
         },
-        themeVars: useThemeVars()
+        themeVars: useThemeVars(),
+        key: 1
     }),
 
     actions: {
@@ -61,6 +63,10 @@ export const useThemeStore = defineStore({
         changeLayoutConfig(key: keyof LayoutCssVarProps, value: number) {
             this.layoutConfig[key] = value
             this.createLayoutCssVar()
+        },
+        changeThemeVars(key, value: string) {
+            this.themeVars[key] = value
+            this.key += 1
         }
     }
 });
