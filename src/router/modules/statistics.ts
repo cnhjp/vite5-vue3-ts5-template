@@ -1,14 +1,14 @@
-import { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
-    {
-        path: "/statistics",
-        name: "Statistics",
-        component: () => import("@/pages/statistics/index.vue"),
-        meta: {
-            i18nTitlte: 'route.statistics',
-        }
-    }
+  {
+    path: '/statistics',
+    name: 'Statistics',
+    component: () => import('@/pages/statistics/index.vue'),
+    meta: {
+      i18nTitlte: 'route.statistics',
+    },
+  },
 ]
 
-export default routes;
+export default routes

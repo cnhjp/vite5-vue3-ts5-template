@@ -1,5 +1,31 @@
+<script setup lang="ts">
+const { changeThemeVars } = useThemeStore()
+const { themeVars } = storeToRefs(useThemeStore())
+
+type ColorKey =
+  | 'primaryColor'
+  | 'infoColor'
+  | 'successColor'
+  | 'warningColor'
+  | 'errorColor'
+
+const colorList = ref<ColorKey[]>([
+  'primaryColor',
+  'infoColor',
+  'successColor',
+  'warningColor',
+  'errorColor',
+])
+
+function changeThemeColor(key: ColorKey, val: string) {
+  changeThemeVars(key, val)
+}
+</script>
+
 <template>
-  <n-divider dashed>{{ $t("message.themeSetting") }}</n-divider>
+  <n-divider dashed>
+    {{ $t("message.themeSetting") }}
+  </n-divider>
   <n-space>
     <template v-for="color in colorList" :key="color">
       <n-flex justify="space-between" align="center">
@@ -13,27 +39,3 @@
     </template>
   </n-space>
 </template>
-
-<script setup lang="ts">
-const { changeThemeVars } = useThemeStore();
-const { themeVars } = storeToRefs(useThemeStore());
-
-type ColorKey =
-  | "primaryColor"
-  | "infoColor"
-  | "successColor"
-  | "warningColor"
-  | "errorColor";
-
-const colorList = ref<ColorKey[]>([
-  "primaryColor",
-  "infoColor",
-  "successColor",
-  "warningColor",
-  "errorColor",
-]);
-
-function changeThemeColor(key: ColorKey, val: string) {
-  changeThemeVars(key, val);
-}
-</script>

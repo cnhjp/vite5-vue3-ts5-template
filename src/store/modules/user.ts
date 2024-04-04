@@ -1,7 +1,7 @@
 export const useUserStore = defineStore('user', {
-    state: () => ({
-        logged: false,
-    })
-});
+  state: () => ({
+    logged: false,
+  }),
+})
 
 export type UserStore = ReturnType<typeof useUserStore>

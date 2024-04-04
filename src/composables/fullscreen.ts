@@ -1,11 +1,11 @@
-import { useFullscreen as _useFullscreen } from "@vueuse/core";
+import { useFullscreen as _useFullscreen } from '@vueuse/core'
 
-export const useFullscreen = () => {
-    const { isFullscreen, toggle, enter, exit } = _useFullscreen();
-    return {
-        isFullscreen,
-        toggle,
-        enter,
-        exit
-    };
+export function useFullscreen() {
+  const { isFullscreen, toggle, enter, exit } = _useFullscreen()
+  return {
+    isFullscreen,
+    toggle,
+    enter,
+    exit,
+  }
 }

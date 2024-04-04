@@ -1,5 +1,15 @@
+<script setup lang="ts">
+const { layoutState } = useThemeStore()
+
+function handleSwitchLayout(e: number) {
+  layoutState.currentLayout = e
+}
+</script>
+
 <template>
-  <n-divider dashed>{{ $t("message.switchLayout") }}</n-divider>
+  <n-divider dashed>
+    {{ $t("message.switchLayout") }}
+  </n-divider>
   <n-flex justify="center">
     <n-radio-group
       :value="layoutState.currentLayout"
@@ -10,15 +20,7 @@
         :key="l"
         :value="l"
         :label="`${$t('message.layout')}${l}`"
-      ></n-radio>
+      />
     </n-radio-group>
   </n-flex>
 </template>
-
-<script setup lang="ts">
-const { layoutState } = useThemeStore();
-
-const handleSwitchLayout = (e: number) => {
-  layoutState.currentLayout = e;
-};
-</script>

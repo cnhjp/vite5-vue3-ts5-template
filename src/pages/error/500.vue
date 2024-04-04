@@ -1,1 +1,3 @@
-<template>500</template>
+<template>
+  500
+</template>

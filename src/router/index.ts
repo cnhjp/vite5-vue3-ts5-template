@@ -1,10 +1,11 @@
-import { router } from './router';
-export * from './guard';
+import { router } from './router'
 
-export default router;
+export * from './guard'
+
+export default router
 
 export { router }
 
 export const install: CustomModule = (app) => {
-    app.use(router);
+  app.use(router)
 }

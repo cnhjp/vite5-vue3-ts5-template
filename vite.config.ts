@@ -7,14 +7,13 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { unheadVueComposablesImports } from '@unhead/vue'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
-
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
       '@': '/src',
-      '~': '/'
-    }
+      '~': '/',
+    },
   },
   plugins: [vue(), AutoImport({
     imports: ['vue', 'pinia', '@vueuse/core', {
@@ -26,7 +25,7 @@ export default defineConfig({
         'onBeforeRouteUpdate',
         'createRouter',
         'createWebHistory',
-        'createWebHashHistory'
+        'createWebHashHistory',
       ],
     }, unheadVueComposablesImports],
     include: [
@@ -39,7 +38,7 @@ export default defineConfig({
     vueTemplate: true,
   }), AutoComponents({
     exclude: [/node_modules/, /^\.\/src\/components\/.*\.vue$/],
-    resolvers: [NaiveUiResolver()]
+    resolvers: [NaiveUiResolver()],
   }), UnoCSS(), vueJsx()],
 
 })

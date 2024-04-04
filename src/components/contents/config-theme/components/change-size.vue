@@ -1,5 +1,11 @@
+<script setup lang="ts">
+const { layoutConfig, changeLayoutConfig } = useThemeStore()
+</script>
+
 <template>
-  <n-divider dashed>{{ $t("lang.changeLang") }}</n-divider>
+  <n-divider dashed>
+    {{ $t("lang.changeLang") }}
+  </n-divider>
   <n-space>
     <n-flex justify="space-between" align="center">
       <span>{{ $t("message.headerHeight") }}</span>
@@ -39,7 +45,3 @@
     </n-flex>
   </n-space>
 </template>
-
-<script setup lang="ts">
-const { layoutConfig, changeLayoutConfig } = useThemeStore();
-</script>

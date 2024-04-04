@@ -1,1 +1,3 @@
-<template>user</template>
+<template>
+  user
+</template>

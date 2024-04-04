@@ -1,3 +1,13 @@
+<script setup lang="ts">
+const { layoutConfig, layoutState, setCollapse } = useThemeStore()
+
+const { siderWidth, collapsedSiderWidth } = layoutConfig
+
+function handleCollapse(collapsed: boolean) {
+  setCollapse(collapsed)
+}
+</script>
+
 <template>
   <n-layout-sider
     bordered
@@ -6,16 +16,7 @@
     :collapsed-width="collapsedSiderWidth"
     :on-update:collapsed="handleCollapse"
     show-trigger="arrow-circle"
-    >sider</n-layout-sider
   >
+    sider
+  </n-layout-sider>
 </template>
-
-<script setup lang="ts">
-const { layoutConfig, layoutState, setCollapse } = useThemeStore();
-
-const { siderWidth, collapsedSiderWidth } = layoutConfig;
-
-const handleCollapse = (collapsed: boolean) => {
-  setCollapse(collapsed);
-};
-</script>

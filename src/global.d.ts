@@ -1,4 +1,4 @@
-import { createApp, defineComponent } from 'vue'
+import type { createApp } from 'vue'
 
 declare global {
     type KeyField = string | number | symbol

@@ -1,1 +1,3 @@
-<template>statistics</template>
+<template>
+  statistics
+</template>
