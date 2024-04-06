@@ -5,10 +5,13 @@
     "themeSetting": "テーマ設定",
     "switchLayout": "レイアウト切り替え",
     "layout": "レイアウト",
+    "changeSize": "サイズを変更",
     "headerHeight": "ヘッダーの高さ",
     "siderWidth": "サイダーの幅",
     "footerHeight": "フッターの高さ",
-    "contentPadding": "コンテンツの余白"
+    "contentPadding": "コンテンツの余白",
+    "transitionName": "トランジション名",
+    "resetTheme": "テーマをリセット"
   },
   "lang": {
     "lang": "日本語",

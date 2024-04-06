@@ -34,7 +34,7 @@ export default defineConfig({
       /\.vue\?vue/,
       /\.md$/,
     ],
-    dirs: ['src', 'src/store', 'src/composables'],
+    dirs: ['src', 'src/store', 'src/composables', 'src/config'],
     vueTemplate: true,
   }), AutoComponents({
     exclude: [/node_modules/, /^\.\/src\/components\/.*\.vue$/],

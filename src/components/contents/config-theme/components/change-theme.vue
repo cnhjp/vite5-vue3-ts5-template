@@ -1,25 +1,29 @@
 <script setup lang="ts">
-const { changeThemeVars } = useThemeStore()
-const { themeVars } = storeToRefs(useThemeStore())
+const { changeThemeVars } = useThemeStore();
+const { themeVars, darkThemeVars } = storeToRefs(useThemeStore());
 
 type ColorKey =
-  | 'primaryColor'
-  | 'infoColor'
-  | 'successColor'
-  | 'warningColor'
-  | 'errorColor'
+  | "primaryColor"
+  | "infoColor"
+  | "successColor"
+  | "warningColor"
+  | "errorColor";
 
 const colorList = ref<ColorKey[]>([
-  'primaryColor',
-  'infoColor',
-  'successColor',
-  'warningColor',
-  'errorColor',
-])
+  "primaryColor",
+  "infoColor",
+  "successColor",
+  "warningColor",
+  "errorColor",
+]);
 
 function changeThemeColor(key: ColorKey, val: string) {
-  changeThemeVars(key, val)
+  changeThemeVars(key, val);
 }
+
+const theme = computed(() => {
+  return isDark.value ? darkThemeVars.value : themeVars.value;
+});
 </script>
 
 <template>
@@ -31,8 +35,8 @@ function changeThemeColor(key: ColorKey, val: string) {
       <n-flex justify="space-between" align="center">
         <span>{{ $t(`themeColor.${color}`) }}</span>
         <n-color-picker
-          :value="themeVars[color]"
-          :on-update:value="(e) => changeThemeColor(color, e)"
+          :value="theme[color]"
+          :on-update:value="(e: string) => changeThemeColor(color, e)"
           class="w-24"
         />
       </n-flex>

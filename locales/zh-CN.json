@@ -5,10 +5,13 @@
     "themeSetting": "主题设置",
     "switchLayout": "切换布局",
     "layout": "布局",
+    "changeSize": "修改尺寸",
     "headerHeight": "头部高度",
     "siderWidth": "侧边栏宽度",
     "footerHeight": "底部高度",
-    "contentPadding": "内容内边距"
+    "contentPadding": "内容内边距",
+    "transitionName": "过渡动画",
+    "resetTheme": "重置主题"
   },
   "lang": {
     "lang": "简体中文",

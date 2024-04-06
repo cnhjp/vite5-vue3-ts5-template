@@ -27,7 +27,7 @@
 - [x] 进度条
 - [ ] highlight
 - [ ] 网络封装
-- [ ] husky/lint
+- [x] husky/lint
 - [ ] 动画
 - [ ] loading
 - [x] fullscreen

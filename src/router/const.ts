@@ -2,10 +2,17 @@ import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('@/pages/home/index.vue'),
-    meta: { i18nTitlte: 'route.home' },
+    path: '/home',
+    redirect: '/home/index',
+    component: () => import('@/layouts'),
+    children: [
+      {
+        path: 'index',
+        name: 'Home',
+        component: () => import('@/pages/home/index.vue'),
+        meta: { i18nTitle: 'route.home' },
+      },
+    ],
   },
   {
     path: '/home',
@@ -30,6 +37,7 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
+
   {
     path: '/login',
     name: 'Login',

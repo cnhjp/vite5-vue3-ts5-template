@@ -7,6 +7,8 @@ export {}
 declare global {
   const $t: typeof import('./src/composables/i18n')['$t']
   const EffectScope: typeof import('vue')['EffectScope']
+  const INITIAL_DARK_THEME: typeof import('./src/config/theme')['INITIAL_DARK_THEME']
+  const INITIAL_THEME: typeof import('./src/config/theme')['INITIAL_THEME']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
@@ -336,6 +338,8 @@ declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly INITIAL_DARK_THEME: UnwrapRef<typeof import('./src/config/theme')['INITIAL_DARK_THEME']>
+    readonly INITIAL_THEME: UnwrapRef<typeof import('./src/config/theme')['INITIAL_THEME']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
@@ -652,6 +656,8 @@ declare module '@vue/runtime-core' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly INITIAL_DARK_THEME: UnwrapRef<typeof import('./src/config/theme')['INITIAL_DARK_THEME']>
+    readonly INITIAL_THEME: UnwrapRef<typeof import('./src/config/theme')['INITIAL_THEME']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>

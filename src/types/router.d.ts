@@ -11,11 +11,21 @@ declare module 'vue-router' {
    * 路由元信息
    */
   interface RouteMeta {
-    // 标题
+    /**
+     * 标题
+     */
     title?: string
-    // i18n标题
+    /**
+     * i18n标题
+     */
     i18nTitle?: string
-    // 是否需要登录
+    /**
+     * 是否需要权限
+     */
     requiresAuth?: boolean
+    /**
+     * 过渡效果
+     */
+    transitionName?: TransitionName
   }
 }

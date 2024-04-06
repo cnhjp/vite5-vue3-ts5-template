@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { darkTheme } from "naive-ui";
-
 useHead({
   meta: [
     {
@@ -17,15 +15,12 @@ useHead({
   ],
 });
 
+const { themeVars, darkThemeVars, transitionName }
+  = storeToRefs(useThemeStore());
+
 const theme = computed(() => {
-  return isDark.value ? darkTheme : undefined;
-});
-const { themeVars, key } = storeToRefs(useThemeStore());
-const themeOverrides = computed(() => {
   return {
-    // TODO: 这里必须加一个key，否则在切换主题时不生效
-    ...themeVars.value,
-    otherKey: key.value,
+    common: isDark.value ? darkThemeVars.value : themeVars.value,
   };
 });
 </script>
@@ -33,9 +28,13 @@ const themeOverrides = computed(() => {
 <template>
   <n-config-provider
     :theme="theme"
-    :theme-overrides="themeOverrides"
+    :theme-overrides="theme"
     class="h-full w-full"
   >
-    <RouterView />
+    <router-view v-slot="{ Component, route }">
+      <transition :name="route.meta.transition || transitionName" appear>
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </n-config-provider>
 </template>

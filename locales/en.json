@@ -5,10 +5,13 @@
     "themeSetting": "Theme Setting",
     "switchLayout": "Switch Layout",
     "layout": "Layout",
+    "changeSize": "Change Size",
     "headerHeight": "Header Height",
     "siderWidth": "Sider Width",
     "footerHeight": "Footer Height",
-    "contentPadding": "Content Padding"
+    "contentPadding": "Content Padding",
+    "transitionName": "Transition Name",
+    "resetTheme": "Reset Theme"
   },
   "lang": {
     "lang": "English",
