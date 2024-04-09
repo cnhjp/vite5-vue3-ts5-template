@@ -26,8 +26,6 @@ declare module 'vue' {
     NLayoutFooter: typeof import('naive-ui')['NLayoutFooter']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
-    NLoadingBarProvid: typeof import('naive-ui')['NLoadingBarProvid']
-    NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider']
     NRadio: typeof import('naive-ui')['NRadio']
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
     NSelect: typeof import('naive-ui')['NSelect']

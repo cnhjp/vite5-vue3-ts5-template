@@ -11,6 +11,7 @@ export default antfu({
     "vue/block-tag-newline": "off",
     "style/semi": "off",
     "style/quotes": "off",
+    "no-console": "off",
   },
 });
 

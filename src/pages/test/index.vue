@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { useThemeVars } from "naive-ui";
-import { router } from "@/router";
+import router from "@/router";
+
+function toDetail() {
+  router.push({ name: "TestDetail" });
+}
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
@@ -11,15 +15,22 @@ function changeLang() {
 }
 
 function toHome() {
-  router.push("/home");
+  router.push({ name: "Home" });
 }
 
 const foo = useThemeVars();
 function getTheme() {}
+
+console.log("testtttttttttt");
 </script>
 
 <template>
   <div>
+    <h1>keepAlive</h1>
+    <n-button @click="toDetail">
+      test detail
+    </n-button>
+
     <h1>dark</h1>
     <button class="btn btn-primary" @click="toggleDark()">
       {{ isDark ? "切换夜间模式" : "切换白天模式" }}

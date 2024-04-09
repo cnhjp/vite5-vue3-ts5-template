@@ -19,7 +19,7 @@ const options = ref([
 <template>
   <n-divider dashed>
     {{ $t("message.transitionName") }}
-  </n-divider>{{ transitionName }}
+  </n-divider>
   <n-select
     :value="transitionName"
     :options="options"
