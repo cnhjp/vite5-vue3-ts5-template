@@ -11,6 +11,8 @@
 - [x] VueI18n
 - [x] NProgress
 - [x] NaiveUI@2
+- [x] Highligh.JS
+- [x] Clipboard
 
 ### ToDo
 

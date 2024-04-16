@@ -17,11 +17,7 @@ function changeLang() {
 function toHome() {
   router.push({ name: "Home" });
 }
-
-const foo = useThemeVars();
 function getTheme() {}
-
-console.log("testtttttttttt");
 </script>
 
 <template>
@@ -50,7 +46,7 @@ console.log("testtttttttttt");
 
     <h1>icon</h1>
     <div class="i-mdi-alarm text-orange-400 dark:bg-blue-500" />
-    <div class="i-mdi:car-multiple h-1em w-1em" />
+    <div class="i-mdi-car-multiple h-1em w-1em" />
 
     <h1>i18n</h1>
     <div>{{ $t("message.hello") }}</div>
@@ -85,8 +81,25 @@ console.log("testtttttttttt");
     <n-button type="error">
       错误
     </n-button>
-    <pre>
-    {{ foo }}
-  </pre>
+
+    <h1>高亮</h1>
+    <div v-highlight="'python'">
+      <pre><code>
+def hello_world():
+  for i in range(10):
+    if i % 2 == 0:
+      print("Hello, world!")
+    else:
+      print("Goodbye, world!")
+    </code></pre>
+    </div>
+
+    <div v-highlight.code>
+      <pre><code>
+function helloWorld() {
+  console.log("Hello, world!");
+}
+    </code></pre>
+    </div>
   </div>
 </template>

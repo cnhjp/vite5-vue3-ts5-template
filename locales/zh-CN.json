@@ -11,7 +11,9 @@
     "footerHeight": "底部高度",
     "contentPadding": "内容内边距",
     "transitionName": "过渡动画",
-    "resetTheme": "重置主题"
+    "resetTheme": "重置主题",
+    "copySuccess": "复制成功",
+    "copyFail": "复制失败"
   },
   "lang": {
     "lang": "简体中文",

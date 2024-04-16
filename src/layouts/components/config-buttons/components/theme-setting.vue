@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const showDrawer = ref(false)
+const showDrawer = ref(false);
 </script>
 
 <template>

@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AppProvider: typeof import('./src/components/contents/app-provider/index.vue')['default']
     ChangeSize: typeof import('./src/components/contents/config-theme/components/change-size.vue')['default']
     ChangeTheme: typeof import('./src/components/contents/config-theme/components/change-theme.vue')['default']
     ConfigTheme: typeof import('./src/components/contents/config-theme/index.vue')['default']
@@ -26,6 +27,7 @@ declare module 'vue' {
     NLayoutFooter: typeof import('naive-ui')['NLayoutFooter']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
+    NMessageProvider: typeof import('naive-ui')['NMessageProvider']
     NRadio: typeof import('naive-ui')['NRadio']
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
     NSelect: typeof import('naive-ui')['NSelect']

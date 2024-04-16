@@ -26,4 +26,9 @@ export default defineConfig({
     ['btn-primary', 'p-2 bg-blue-500 text-white rounded-md'],
     ['btn-secondary', 'p-2 bg-gray-500 text-white rounded-md'],
   ],
+  content: {
+    pipeline: {
+      // include: ['**/*.{ts,tsx}'],
+    },
+  },
 })

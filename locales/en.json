@@ -11,7 +11,9 @@
     "footerHeight": "Footer Height",
     "contentPadding": "Content Padding",
     "transitionName": "Transition Name",
-    "resetTheme": "Reset Theme"
+    "resetTheme": "Reset Theme",
+    "copySuccess": "Copy Success",
+    "copyFail": "Copy Fail"
   },
   "lang": {
     "lang": "English",

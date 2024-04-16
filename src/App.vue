@@ -15,8 +15,7 @@ useHead({
   ],
 });
 
-const { themeVars, darkThemeVars, transitionName }
-  = storeToRefs(useThemeStore());
+const { themeVars, darkThemeVars } = storeToRefs(useThemeStore());
 
 const theme = computed(() => {
   return {
@@ -31,12 +30,8 @@ const theme = computed(() => {
     :theme-overrides="theme"
     class="h-full w-full"
   >
-    <router-view v-slot="{ Component, route }">
-      <transition :name="route.meta.transition || transitionName" appear>
-        <keep-alive>
-          <component :is="Component" />
-        </keep-alive>
-      </transition>
-    </router-view>
+    <n-message-provider>
+      <app-provider />
+    </n-message-provider>
   </n-config-provider>
 </template>

@@ -11,7 +11,9 @@
     "footerHeight": "フッターの高さ",
     "contentPadding": "コンテンツの余白",
     "transitionName": "トランジション名",
-    "resetTheme": "テーマをリセット"
+    "resetTheme": "テーマをリセット",
+    "copySuccess": "コピー成功",
+    "copyFail": "コピー失敗"
   },
   "lang": {
     "lang": "日本語",
