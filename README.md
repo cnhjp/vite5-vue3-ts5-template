@@ -27,9 +27,9 @@
 - [x] Iconify
 - [x] 字体
 - [x] 进度条
-- [ ] highlight
+- [x] highlight
 - [ ] 网络封装
 - [x] husky/lint
-- [ ] 动画
+- [x] 动画
 - [ ] loading
 - [x] fullscreen

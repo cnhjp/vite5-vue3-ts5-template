@@ -2,10 +2,20 @@ import hljs from 'highlight.js';
 import ClipboardJS from "clipboard";
 
 async function handler(el: HTMLElement, binding: any) {
+  const existingStyle = document.getElementById('highlight-style');
+  if (existingStyle)
+    document.head.removeChild(existingStyle);
+
+  // Dynamically add highlight.js styles
+  const link = document.createElement('link');
+  link.id = 'highlight-style';
+  link.rel = 'stylesheet';
   if (isDark.value)
-    await import('highlight.js/styles/dark.css');
+    link.href = 'node_modules/highlight.js/styles/dark.css';
   else
-    await import('highlight.js/styles/brown-paper.css');
+    link.href = 'node_modules/highlight.js/styles/brown-paper.css';
+
+  document.head.appendChild(link);
 
   const codes = el.querySelectorAll('pre code');
   codes.forEach((code) => {
@@ -54,7 +64,7 @@ async function handler(el: HTMLElement, binding: any) {
 }
 
 const highlightDirective = {
-  beforeMount(el: HTMLElement, binding: any) {
+  mounted(el: HTMLElement, binding: any) {
     handler(el, binding);
   },
   updated(el: HTMLElement, binding: any) {
