@@ -12,6 +12,7 @@ export default antfu({
     "style/semi": "off",
     "style/quotes": "off",
     "no-console": "off",
+    "unused-imports/no-unused-imports-ts": "warn",
   },
 });
 

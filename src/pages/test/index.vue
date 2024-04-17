@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useThemeVars } from "naive-ui";
 import router from "@/router";
 
 function toDetail() {

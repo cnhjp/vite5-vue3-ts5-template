@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "postinstall": "simple-git-hooks"
+    "postinstall": "simple-git-hooks",
+    "simple-git-hooks": "npx simple-git-hooks"
   },
   "dependencies": {
     "@vueuse/core": "^10.9.0",
@@ -46,12 +47,5 @@
     "unplugin-vue-components": "^0.26.0",
     "vite": "^5.2.0",
     "vue-tsc": "^2.0.6"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged",
-    "commit-msg": "node scripts/verifyCommit.js"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
   }
 }
