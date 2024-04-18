@@ -19,6 +19,10 @@ const routes: RouteRecordRaw[] = [
     redirect: '/',
   },
   {
+    path: '/',
+    redirect: '/test',
+  },
+  {
     path: '/user/:userId?',
     name: 'User',
     component: () => import('@/pages/user/index.vue'),

@@ -1,6 +1,10 @@
 import hljs from 'highlight.js';
 import ClipboardJS from "clipboard";
 
+function join(...paths: string[]): string {
+  return paths.join('/').replace(/\/+/g, '/');
+}
+
 async function handler(el: HTMLElement, binding: any) {
   const existingStyle = document.getElementById('highlight-style');
   if (existingStyle)
@@ -11,9 +15,9 @@ async function handler(el: HTMLElement, binding: any) {
   link.id = 'highlight-style';
   link.rel = 'stylesheet';
   if (isDark.value)
-    link.href = 'node_modules/highlight.js/styles/dark.css';
+    link.href = join(import.meta.env.VITE_APP_BASE, '/styles/highlightjs/dark.css');
   else
-    link.href = 'node_modules/highlight.js/styles/brown-paper.css';
+    link.href = join(import.meta.env.VITE_APP_BASE, '/styles/highlightjs/brown-paper.css');
 
   document.head.appendChild(link);
 

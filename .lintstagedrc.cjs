@@ -1,3 +1,3 @@
 module.exports = {
-  "*": "eslint --fix",
+  "src/**/*": "eslint",
 };

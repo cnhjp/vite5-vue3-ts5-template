@@ -31,4 +31,5 @@ export default defineConfig({
       // include: ['**/*.{ts,tsx}'],
     },
   },
+  safelist: ['i-heroicons-document-duplicate-solid', 'i-heroicons-document-duplicate', 'copy-button', 'hover:cursor-pointer', 'w-6', 'h-6', 'hover:w-4', 'hover:h-4', 'absolute', 'top-2', 'right-2', 'text-gray-500']
 })
