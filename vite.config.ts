@@ -6,6 +6,7 @@ import UnoCSS from 'unocss/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { unheadVueComposablesImports } from '@unhead/vue'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import watchAndExec from './plugins/vite-plugin-watch-and-exec'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -39,6 +40,8 @@ export default defineConfig({
   }), AutoComponents({
     exclude: [/node_modules/, /^\.\/src\/components\/.*\.vue$/],
     resolvers: [NaiveUiResolver()],
-  }), UnoCSS(), vueJsx()],
+  }), UnoCSS(), vueJsx(), watchAndExec({
+    './.simple-git-hooks.cjs': ['npx simple-git-hooks'],
+  })],
 
 })
